@@ -1,16 +1,37 @@
-language: csharp
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev"  # 3.5 development branch
+  - "3.6"
+  - "3.6-dev"  # 3.6 development branch
+  - "3.7-dev"  # 3.7 development branch
+# command to install dependencies
 
+install:
+  - pip install -U pip  
+  - pip install -r requirements.txt
+  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then pip install -e azure-storage-nspkg; fi;  # Would work on Python 3, but will not be installed by PyPI. Trying to be close to real life.
+  - pip install -e azure-storage-common
+  - pip install -e azure-storage-blob
+  - pip install -e azure-storage-file
+  - pip install -e azure-storage-queue
+# command to run tests
+script:
+  - script.py
 branches:
   except:
     - test-branch
-
-gibefore_deploy: "echo 'ready?'"
 
 deploy:
   provider: azure_web_apps
   username: azure_deployment_user       # If AZURE_WA_USERNAME isn't set
   password: azure_deployment_password   # If AZURE_WA_PASSWORD isn't set
   site: azure_deployment_sitename       # If AZURE_WA_SITE isn't set
+  slot: azure_deployment_slotname       # (optional) If AZURE_WA_SLOT isn't set
   on: master
   file_glob: true
   file: "images/*"
