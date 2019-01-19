@@ -1,14 +1,10 @@
 languages: python
-
-install: pip install azure-storage==0.30.0
-
+install: 
+  - pip install azure-storage==0.30.0
 deploy:
   script: script.py
   skip_cleanup: true
-
  on:
-   branch: test_branch
+  branch: test_branch
   file_glob: true
   file: "images/*"
-
-  #nothing
