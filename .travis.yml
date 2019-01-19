@@ -1,5 +1,6 @@
 languages: python
 install: 
+  - pip install --upgrade pip
   - pip install azure-storage-blob
 deploy:
   script: script.py
