@@ -1,4 +1,3 @@
-install: -g azure-functions-core-tools
 deploy:
   provider: azure_web_apps
   skip_cleanup: true
