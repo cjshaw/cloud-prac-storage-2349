@@ -1,5 +1,7 @@
 languages: python
 
+install: pip install azure-storage==0.30.0
+
 deploy:
   script: script.py
   skip_cleanup: true
