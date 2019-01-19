@@ -3,7 +3,8 @@ python:
   - "3.6"
 script: pytest
 install:
-  - pip install azure-storage-blob
+  - pip --user install --pip upgrade
+  - pip --user install azure-storage-blob
 deploy:
   script: script.py
   skip_cleanup: true
