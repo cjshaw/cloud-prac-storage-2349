@@ -3,7 +3,7 @@ before_install:
   - gem update --system
   - gem --version
   - gem sources --remove https://rubygems.org/
-  - gem sources -a http://rubygems.org/
+  - gem sources -a https://rubygems.org/
 install: gem install azure-blob-storage
 script: uploadScript.rb
 
