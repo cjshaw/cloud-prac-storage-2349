@@ -1,12 +1,13 @@
 languages: python
 python: 
   - "3.6"
-script: pytest
+script: 
+  - pytest
 install:
-  - pip --user install --pip upgrade
-  - pip --user install azure-storage-blob
+  - pip install --pip upgrade
+  - pip install azure-storage-blob
 deploy:
   script: script.py
   skip_cleanup: true
   on:
-  branch: master
+    branch: master
