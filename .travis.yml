@@ -1,9 +1,8 @@
 languages: python
 install: 
   - pip install azure-storage-blob
+deploy:
   script: script.py
   skip_cleanup: true
- on:
-  branch: test_branch
-  file_glob: true
-  file: "images/*"
+  on:
+  branch: master
