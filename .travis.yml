@@ -1,7 +1,6 @@
 languages: python
 install: 
-  - pip install azure-storage==0.30.0
-deploy:
+  - pip install azure-storage-blob
   script: script.py
   skip_cleanup: true
  on:
