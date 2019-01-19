@@ -5,6 +5,8 @@ before_install:
   - gem sources --remove https://rubygems.org/
   - gem sources -a https://rubygems.org/
 install: gem install azure_mgmt_storage
-script: 'uploadScript.rb'
+deploy:
+  provider: script
+  script: rvm use $TRAVIS_RUBY_VERSION do uploadScript.rb
 
 
