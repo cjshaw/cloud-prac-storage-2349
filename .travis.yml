@@ -2,8 +2,7 @@ languages: python
 python: 
   - "3.6"
 script: pytest
-install: 
-  - pip install --user -r requirements.txt
+install:
   - pip install --upgrade pip
   - pip install azure-storage-blob
 deploy:
