@@ -1,12 +1,7 @@
-language: ruby
-before_install:
-  - gem update --system
-  - gem --version
-  - gem sources --remove https://rubygems.org/
-  - gem sources -a https://rubygems.org/
-install: gem install azure_mgmt_storage
-deploy:
-  provider: script
-  script: rvm use $TRAVIS_RUBY_VERSION do uploadScript.rb
+language: python
+python:
+  - "3.6"
+script:
+  - pytest
 
 
