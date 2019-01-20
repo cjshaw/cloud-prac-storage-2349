@@ -7,4 +7,4 @@ install:
   - pip install azure
 script:
   - pytest
-  - python script.py
+  - python script.py args ACCOUNT_NAME, ACCOUNT_KEY
