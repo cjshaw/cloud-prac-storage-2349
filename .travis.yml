@@ -2,6 +2,8 @@ language: python
 python:
   - "3.6"
 install:
+  - pip install --update
+  - pip install --upgrade
   - pip install git+git://github.com/azure/azure-storage-python 
   - pip install azure
   - pip install azure-storage-blob
