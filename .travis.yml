@@ -3,11 +3,8 @@ python:
   - "3.6"
 install:
   - pip install --upgrade pip
-  - pip install git+git://github.com/azure/azure-storage-python 
-  - pip install azure
-  - pip install azure-storage-blob
-  - pip install azure-storage-file
-  - pip install azure-storage-queue
+  - pip install git+git://github.com/Azure/azure-sdk-for-python
+  - pip install azure-mgmt-storage
 script:
   - pytest
   - python script.py
