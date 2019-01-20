@@ -53,11 +53,11 @@ def run_sample():
         block_blob_service.set_container_acl(container_name, public_access=PublicAccess.Container)
 
         # Create a file in Documents to test the upload and download.
-        local_path=os.path.expanduser("~/images")
+        local_path=os.path.expanduser("~/cjshaw/cloud-prac-storage-2349/images")
         local_file_name ="testimage.jpg"
         full_path_to_file =os.path.join(local_path, local_file_name)
 
-        print("\nUploading to Blob storage as blob" + local_file_name)
+        print("\nUploading to Blob storage as blob " + local_file_name)
 
         # Upload the created file, use local_file_name for the blob name
         block_blob_service.create_blob_from_path(container_name, local_file_name, full_path_to_file)
