@@ -40,10 +40,10 @@ from azure.storage.blob import BlockBlobService, PublicAccess
 # ----------------------------------------------------------------------------------------------------------
 
 
-def run_sample():
+def run_sample(account_name1, account_key1):
     try:
         # Create the BlockBlockService that is used to call the Blob service for the storage account
-        block_blob_service = BlockBlobService(account_name='storage2349', account_key='I1F+6O9FeF469O5j9QOm8tbZXymXC2Ayo3JwG9dcmfSRlyrgKtbNGgT8Dke9n52BGwlIVscoJDIrAtKlYUjJ1w==')
+        block_blob_service = BlockBlobService(account_name=account_name1, account_key=account_key1)
 
         # Create a container called 'quickstartblobs'.
         container_name ='quickstartblobs'
@@ -73,6 +73,6 @@ def run_sample():
 
 # Main method.
 if __name__ == '__main__':
-    run_sample()
+    run_sample(os.environ['ACCOUNT_NAME'], os.environ['ACCOUNT_KEY'])
 
 
