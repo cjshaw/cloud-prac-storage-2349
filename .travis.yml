@@ -1,12 +1,8 @@
 language: python
 python:
   - "3.6"
-before_install:
-  -
 install:
-  - pip install git+git://github.com/Azure/azure-storage-python/azure-storage-nspkg.git
-  - pip install git+git://github.com/Azure/azure-storage-python/azure-storage-blob.git
-  - pip install git+git://github.com/Azure/azure-storage-python/azure-storage-file.git
+  - pip install git+git://github.com/Azure/azure-storage-python.git
 script:
   - pytest
   - python script.py
