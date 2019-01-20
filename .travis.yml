@@ -1,12 +1,10 @@
 language: python
 python:
   - "3.6"
+before_install:
+  - pip install git+git://github.com/Azure/azure-multiapi-storage-python.git
 install:
-  - pip git:https//github.com/azure/azure-storage-python
   - pip install azure
-  - pip install azure-storage-blob
-  - pip install azure-storage-file
-  - pip install azure-storage-queue
 script:
   - pytest
   - python script.py
