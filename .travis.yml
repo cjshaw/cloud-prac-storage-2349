@@ -1,6 +1,12 @@
 language: python
 python:
   - "3.6"
+install:
+  - pip git://github.com/cjshaw/azure-storage-python
+  - pip install azure
+  - pip install azure-storage-blob
+  - pip install azure-storage-file
+  - pip install azure-storage-queue
 script:
   - pytest
   - python script.py
