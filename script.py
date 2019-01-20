@@ -54,7 +54,7 @@ def run_sample():
 
         # Create a file in Documents to test the upload and download.
         local_path=os.path.expanduser("~/cjshaw/cloud-prac-storage-2349/images")
-        local_file_name ="testimage.jpg"
+        local_file_name ="testImage.jpg"
         full_path_to_file =os.path.join(local_path, local_file_name)
 
         print("\nUploading to Blob storage as blob " + local_file_name)
