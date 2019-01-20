@@ -2,9 +2,10 @@ language: python
 python:
   - "3.6"
 install:
-  - pip install --upgrade pip
-  - pip install git+git://github.com/Azure/azure-sdk-for-python
-  - pip install azure-mgmt-storage
+  - pip install git+git://github.com/Azure/azure-sdk-for-python.git
+  - cd azure-sdk-for-python
+  - python setup.py install
+  - pip install azure
 script:
   - pytest
   - python script.py
