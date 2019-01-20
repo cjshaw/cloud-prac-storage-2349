@@ -3,6 +3,4 @@ python:
   - "3.6"
 script:
   - pytest
-deploy:
-  provider: script
-  script: script
+  - python script.py
