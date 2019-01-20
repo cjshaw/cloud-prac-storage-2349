@@ -5,9 +5,6 @@ before_install:
   - pip install git+git://github.com/Azure/azure-multiapi-storage-python.git
 install:
   - pip install azure
-  - pip install azure-blob-storage
-  - pip install azure-file-storage
-  - pip install azure-storage-queue
 script:
   - pytest
   - python script.py
