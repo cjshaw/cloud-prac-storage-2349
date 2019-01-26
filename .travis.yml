@@ -1,13 +1,13 @@
-language: python
+language: python #language that your code is on
 python:
-  - "3.6"
+  - "3.6" #version of python
 before_install:
-  - pip install git+git://github.com/Azure/azure-multiapi-storage-python.git
+  - pip install git+git://github.com/Azure/azure-multiapi-storage-python.git #github that has azure libraries needed for script
 install:
-  - pip install azure
+  - pip install azure #library needed for upload script
 env:
-  - "ACCOUNT_KEY"
+  - "ACCOUNT_KEY" #enviromental variables saved in travis
   - "ACCOUNT_NAME"
 script:
-  - pytest
-  - python script.py
+  - pytest #test running script
+  - python script.py #script that uploads file to travis
